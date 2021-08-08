@@ -10,4 +10,8 @@ function Marginer(props) {
 	}
 }
 
+Marginer.defaultProps = {
+	direction: 'horizontal',
+};
+
 export { Marginer };

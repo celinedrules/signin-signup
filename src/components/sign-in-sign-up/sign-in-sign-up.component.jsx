@@ -5,7 +5,6 @@ import { SignupForm } from '../sign-up/signup-form.component';
 import { motion } from 'framer-motion';
 import { AccountContext } from '../../contexts/sign-in-sign-up.context';
 
-
 const BoxContainer = styled.div`
   width: 320px;
   min-height: 550px;

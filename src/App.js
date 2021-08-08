@@ -1,11 +1,14 @@
-import {AppContainer} from './app.styles';
+import { AppContainer } from './app.styles';
 import './App.css';
-import { AccountBox } from './components/sign-in-sign-up/sign-in-sign-up.component';
+import SampleDialogueDemo from './components/dialogue/sample-dialogue.component';
 
 function App() {
-	return <AppContainer>
-		<AccountBox />
-	</AppContainer>;
+	return (
+		<AppContainer>
+			{/*<AccountBox />*/}
+			<SampleDialogueDemo />
+		</AppContainer>
+	);
 }
 
 export default App;
