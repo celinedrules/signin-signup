@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { BoldLink, BoxContainer, FormContainer, Input, MutedLink, Submit } from './common.component';
+import { BoldLink, BoxContainer, FormContainer, Input, MutedLink, Submit } from '../../css/common.styles.jsx'
 import { Marginer } from '../marginer/marginer.component';
-import { AccountContext } from './account.context';
+import {AccountContext} from '../../contexts/sign-in-sign-up.context';
 
 export function SigninForm(props) {
 	const { switchToSignup } = useContext(AccountContext);

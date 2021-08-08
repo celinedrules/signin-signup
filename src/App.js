@@ -1,15 +1,6 @@
-import styled from 'styled-components';
+import {AppContainer} from './app.styles';
 import './App.css';
-import { AccountBox } from './components/account-box/acount-box.component';
-
-const AppContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
+import { AccountBox } from './components/sign-in-sign-up/sign-in-sign-up.component';
 
 function App() {
 	return <AppContainer>

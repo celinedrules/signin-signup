@@ -1,17 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const HorizontalMargin = styled.span`
-  display: flex;
-  width: ${({ margin }) =>
-          typeof margin === 'string' ? margin : `${margin}px`};
-`;
-
-const VerticalMargin = styled.span`
-  display: flex;
-  height: ${({ margin }) =>
-          typeof margin === 'string' ? margin : `${margin}px`};
-`;
+import { HorizontalMargin, VerticalMargin } from './marginer.styles';
 
 function Marginer(props) {
 	const { direction } = props;
@@ -21,9 +9,5 @@ function Marginer(props) {
 		return <VerticalMargin {...props} />;
 	}
 }
-
-Marginer.defaultProps = {
-	direction: 'horizontal',
-};
 
 export { Marginer };

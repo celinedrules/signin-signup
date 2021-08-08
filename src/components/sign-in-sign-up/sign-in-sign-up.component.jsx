@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { SigninForm } from './signin-form.component';
+import { SigninForm } from '../sign-in/signin-form.component';
+import { SignupForm } from '../sign-up/signup-form.component';
 import { motion } from 'framer-motion';
-import { AccountContext } from './account.context';
-import { SignupForm } from './signup-form.component';
+import { AccountContext } from '../../contexts/sign-in-sign-up.context';
+
 
 const BoxContainer = styled.div`
   width: 320px;
@@ -91,7 +92,7 @@ const expandedTransition = {
 	stiffness: 30,
 };
 
-export function AccountBox(props) {
+export function AccountBox() {
 	const [isExpanded, setExpanded] = useState(false);
 	const [active, setActive] = useState('signin');
 
