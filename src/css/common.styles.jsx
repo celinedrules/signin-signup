@@ -13,6 +13,7 @@ export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 2.5px rgba(15, 15, 15, 0.19);
+  align-items: center;
 `;
 
 export const MutedLink = styled.a`

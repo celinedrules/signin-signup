@@ -22,7 +22,7 @@ SampleDialogue.propTypes = {
 	open: PropTypes.bool.isRequired,
 };
 
-export default function SampleDialogueDemo() {
+export default function SampleDialogueDemo(props) {
 	const [open, setOpen] = useState(false);
 
 	const handleClickOpen = () => {
@@ -35,7 +35,7 @@ export default function SampleDialogueDemo() {
 
 	return (
 		<div>
-			<button onClick={handleClickOpen}>Click Me</button>
+			<button onClick={handleClickOpen}>Click To Open Dialogue</button>
 			<SampleDialogue onClose={handleClose} open={open} />
 		</div>
 	);

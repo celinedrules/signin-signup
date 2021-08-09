@@ -5,7 +5,6 @@ import SampleDialogueDemo from './components/dialogue/sample-dialogue.component'
 function App() {
 	return (
 		<AppContainer>
-			{/*<AccountBox />*/}
 			<SampleDialogueDemo />
 		</AppContainer>
 	);
