@@ -3,9 +3,16 @@ import { BoldLink, BoxContainer, FormContainer, Input, MutedLink, Submit } from 
 import { Marginer } from '../marginer/marginer.component';
 import { AccountContext } from '../../contexts/sign-in-sign-up.context';
 
-export function SigninForm() {
+export function SigninForm(props) {
 	const { switchToSignup } = useContext(AccountContext);
 
+	const {handleClose} = props;
+	
+	const onClose = () =>{
+		alert('SUCCESSFUL CLOSE')
+		handleClose();
+	}
+	
 	return <BoxContainer>
 		<Marginer direction={'vertical'} margin={15} />
 		<FormContainer>
@@ -14,7 +21,7 @@ export function SigninForm() {
 			<Marginer direction={'vertical'} margin={10} />
 			<MutedLink href={'#'}>Forgot Password?</MutedLink>
 			<Marginer direction={'vertical'} margin={'1.6em'} />
-			<Submit type={'submit'}>Sign In</Submit>
+			<Submit type={'submit'} onClick={onClose} >Sign In</Submit>
 			<Marginer direction={'vertical'} margin={'1em'} />
 			<MutedLink href={'#'}>
 				Don't have an account?

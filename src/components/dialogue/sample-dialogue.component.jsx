@@ -1,4 +1,4 @@
-import { Dialog, makeStyles } from '@material-ui/core';
+import { Dialog } from '@material-ui/core';
 import { PropTypes } from 'prop-types';
 import { useState } from 'react';
 import { AccountBox } from '../sign-in-sign-up/sign-in-sign-up.component';
@@ -7,12 +7,12 @@ function SampleDialogue(props) {
 	const { onClose, selectedValue, open } = props;
 
 	const handleClose = () => {
-		onClose(selectedValue);
+		onClose();
 	};
 
 	return (
 		<Dialog onClose={handleClose} open={open}>
-			<AccountBox />
+			<AccountBox handleClose={handleClose} />
 		</Dialog>
 	);
 }
