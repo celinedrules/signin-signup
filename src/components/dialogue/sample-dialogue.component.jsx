@@ -1,18 +1,23 @@
+import React from 'react';
 import { Dialog } from '@material-ui/core';
 import { PropTypes } from 'prop-types';
 import { useState } from 'react';
 import { AccountBox } from '../sign-in-sign-up/sign-in-sign-up.component';
 
-function SampleDialogue(props) {
+const email = 'f@u'
+
+function SampleDialogue(props)
+{
 	const { onClose, selectedValue, open } = props;
 
-	const handleClose = () => {
-		onClose();
+	const handleClose = () =>
+	{
+		onClose(selectedValue);
 	};
 
 	return (
 		<Dialog onClose={handleClose} open={open}>
-			<AccountBox handleClose={handleClose} />
+			<AccountBox handleClose={handleClose} selectedValue={selectedValue}/>
 		</Dialog>
 	);
 }
@@ -20,23 +25,29 @@ function SampleDialogue(props) {
 SampleDialogue.propTypes = {
 	onClose: PropTypes.func.isRequired,
 	open: PropTypes.bool.isRequired,
+	selectedValue: PropTypes.string.isRequired,
 };
 
-export default function SampleDialogueDemo(props) {
+export default function SampleDialogueDemo(props)
+{
 	const [open, setOpen] = useState(false);
+	const [selectedValue, setSelectedValue] = React.useState(email);
 
-	const handleClickOpen = () => {
+	const handleClickOpen = () =>
+	{
 		setOpen(true);
 	};
 
-	const handleClose = () => {
+	const handleClose = (value) =>
+	{
 		setOpen(false);
+		setSelectedValue(value)
 	};
 
 	return (
 		<div>
 			<button onClick={handleClickOpen}>Click To Open Dialogue</button>
-			<SampleDialogue onClose={handleClose} open={open} />
+			<SampleDialogue selectedValue={selectedValue} onClose={handleClose} open={open} />
 		</div>
-	);
-}
+	)
+}	

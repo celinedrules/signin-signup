@@ -55,7 +55,7 @@ export const Input = styled.input`
   }
 `;
 
-export const Submit = styled.button`
+export const CustomButton = styled.button`
   width: 100%;
   padding: 11px 40px;
   color: white;

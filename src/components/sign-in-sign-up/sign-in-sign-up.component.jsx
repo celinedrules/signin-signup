@@ -93,7 +93,7 @@ const expandedTransition = {
 
 export function AccountBox(props) {
 	
-	const {handleClose} = props
+	const {handleClose, selectedValue} = props
 	
 	const [isExpanded, setExpanded] = useState(false);
 	const [active, setActive] = useState('signin');
@@ -146,7 +146,7 @@ export function AccountBox(props) {
 					}
 				</TopContainer>
 				<InnerContainer>
-					{active === 'signin' && <SigninForm handleClose={handleClose} />}
+					{active === 'signin' && <SigninForm handleClose={handleClose} selectedValue={selectedValue} />}
 					{active === 'signup' && <SignupForm />}
 				</InnerContainer>
 			</BoxContainer>

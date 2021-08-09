@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { BoldLink, BoxContainer, FormContainer, Input, MutedLink, Submit } from '../../css/common.styles';
+import { BoldLink, BoxContainer, FormContainer, Input, MutedLink, CustomButton } from '../../css/common.styles';
 import { Marginer } from '../marginer/marginer.component';
 import { AccountContext } from '../../contexts/sign-in-sign-up.context';
 
@@ -15,7 +15,7 @@ export function SignupForm(props) {
 			<Input type={'password'} placeholder={'Confirm Password'} />
 		</FormContainer>
 		<Marginer direction={'vertical'} margin={10} />
-		<Submit type={'submit'}>Sign Up</Submit>
+		<CustomButton type={'submit'}>Sign Up</CustomButton>
 		<Marginer direction={'vertical'} margin={'1em'} />
 		<MutedLink href={'#'}>
 			Already have an account?
